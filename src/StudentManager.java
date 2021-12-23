@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class StudentManager {
@@ -22,16 +21,20 @@ public class StudentManager {
         if (studentUpdate != null) {
             System.out.println("Nhập vào tên mới");
             String name = scanner.nextLine();
+            studentUpdate.setName(name);
             System.out.println("Nhập vào tuổi mới");
             int age = scanner.nextInt();
+            studentUpdate.setAge(age);
             System.out.println("Nhập diểm toán mới");
             double math = scanner.nextDouble();
+            studentUpdate.setMathScore(math);
             System.out.println("Nhập vào điểm lý mới");
             double rea = scanner.nextDouble();
-            System.out.println("Nhập vào điểm hóa mới");
+            studentUpdate.setPointOfReason(rea);
+            System.out.println("Nhập vào điểm hóa mới");;
             double che = scanner.nextDouble();
-
-            return new Student(name, age, math, rea, che);
+            studentUpdate.setPointChemistry(che);
+            return studentUpdate;
         }
         return null;
     }
@@ -44,7 +47,7 @@ public class StudentManager {
 //     students.sort(new Comparator<Student>() {
 //         @Override
 //         public int compare(Student o1, Student o2) {
-//             if (;)
+//             if ()
 //         }
 //     });
 //    }
